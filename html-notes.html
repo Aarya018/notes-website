@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Notes by Aarya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <nav class="nav-container">
+            <h1 class="logo">Aarya's Notes</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="html-notes.html">HTML</a></li>
+                <li><a href="css-notes.html">CSS</a></li>
+                <li><a href="java-notes.html">Java</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="typing-text">HTML Notes by Aarya</h1>
+            <p>Your go-to place for clean, structured HTML notes.</p>
+            <a href="#contact"><button>Get in Touch</button></a>
+        </div>
+    </section>
+
+    <section class="note-section" id="headings">
+        <h2 >🔹 1. HTML Headings</h2>
+        <article>
+            <p>HTML provides six levels of headings, from <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>.</p>
+            <ul>
+                <li><code>&lt;h1&gt;</code> is the largest and most important heading.</li>
+                <li><code>&lt;h6&gt;</code> is the smallest and least important heading.</li>
+            </ul>
+        </article>
+        <pre><code class="Code">
+&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Sub Heading&lt;/h2&gt;
+&lt;h3&gt;Section Heading&lt;/h3&gt;
+&lt;h4&gt;Sub-section Heading&lt;/h4&gt;
+&lt;h5&gt;Minor Heading&lt;/h5&gt;
+&lt;h6&gt;Tiny Heading&lt;/h6&gt;
+</code></pre>
+    </section>
+
+    <section class="note-section" id="paragraphs">
+        <h2>🔹 2. HTML Paragraphs</h2>
+        <article>
+            <p>The <code>&lt;p&gt;</code> tag is used to define paragraphs in HTML. It automatically adds some spacing
+                before and after the text.</p>
+            <ul>
+                <li>Browsers add margin around paragraphs by default.</li>
+                <li>You can add multiple paragraphs in a page.</li>
+                <li>Line breaks within a paragraph can be added using <code>&lt;br&gt;</code>.</li>
+            </ul>
+        </article>
+        <pre><code class="Code">
+&lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+
+&lt;p&gt;This is a paragraph with a line break.&lt;br&gt;Here is the next line.&lt;/p&gt;
+</code></pre>
+    </section>
+
+    <section class="note-section" id="anchor-tags">
+        <h2>🔹 3. Anchor Tags</h2>
+        <article>
+            <p>The <code>&lt;a&gt;</code> tag is used to define hyperlinks. It allows users to navigate to another page
+                or a specific section on the same page.</p>
+            <ul>
+                <li><code>href</code> attribute defines the link destination.</li>
+                <li><code>target="_blank"</code> opens the link in a new tab.</li>
+                <li>You can link to external sites or internal files.</li>
+            </ul>
+        </article>
+        <pre><code class="Code">
+&lt;a href="https://www.google.com"&gt;Visit Google&lt;/a&gt;
+
+&lt;a href="notes.html"&gt;Go to Notes Page&lt;/a&gt;
+
+&lt;a href="#top" target="_blank"&gt;Open Top Section in New Tab&lt;/a&gt;
+</code></pre>
+    </section>
+
+    <section class="note-section" id="images">
+        <h2>🔹 4. Images</h2>
+        <article>
+            <p>The <code>&lt;img&gt;</code> tag is used to embed images in an HTML page. It's a self-closing tag and
+                uses the following key attributes:</p>
+            <ul>
+                <li><code>src</code>: Specifies the path to the image file (URL or local path).</li>
+                <li><code>alt</code>: Provides alternative text if the image cannot be displayed.</li>
+                <li><code>width</code> and <code>height</code>: Used to control the size of the image.</li>
+            </ul>
+        </article>
+        <pre><code class="Code">
+&lt;img src="images/logo.png" alt="Website Logo" width="200"&gt;
+
+&lt;img src="https://via.placeholder.com/150" alt="Sample Image"&gt;
+</code></pre>
+    </section>
+
+    <section class="note-section" id="forms">
+        <h3>📨 HTML Forms</h3>
+        <p><span class="highlight">Forms</span> are used to collect user input. It can contain fields like text boxes,
+            radio buttons, checkboxes, etc.</p>
+
+        <article class="code-example">
+            <pre><code class="Code">
+&lt;form action="submit.php" method="post"&gt;
+  &lt;label&gt;Name:&lt;/label&gt;
+  &lt;input type="text" name="name" /&gt;
+
+  &lt;br /&gt;
+
+  &lt;label&gt;Email:&lt;/label&gt;
+  &lt;input type="email" name="email" /&gt;
+
+  &lt;br /&gt;
+
+  &lt;label&gt;Gender:&lt;/label&gt;
+  &lt;input type="radio" name="gender" value="male" /&gt; Male
+  &lt;input type="radio" name="gender" value="female" /&gt; Female
+
+  &lt;br /&gt;
+
+  &lt;label&gt;Choose your country:&lt;/label&gt;
+  &lt;select name="country"&gt;
+    &lt;option value="india"&gt;India&lt;/option&gt;
+    &lt;option value="usa"&gt;USA&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;br /&gt;
+
+  &lt;label&gt;Message:&lt;/label&gt;
+  &lt;textarea name="message"&gt;&lt;/textarea&gt;
+
+  &lt;br /&gt;
+
+  &lt;input type="submit" value="Submit" /&gt;
+&lt;/form&gt;
+    </code></pre>
+        </article>
+
+        <article class="notes">
+            <ul>
+                <li><code>&lt;form&gt;</code> tag wraps the form inputs.</li>
+                <li><code>action</code> defines where to send form data.</li>
+                <li><code>method</code> can be <code>get</code> or <code>post</code>.</li>
+                <li>Common input types: <code>text</code>, <code>email</code>, <code>radio</code>,
+                    <code>checkbox</code>, <code>submit</code>.</li>
+                <li><code>&lt;select&gt;</code> is used for dropdowns.</li>
+                <li><code>&lt;textarea&gt;</code> allows multi-line text input.</li>
+            </ul>
+        </article>
+    </section>
+
+    <section class="note-section" id="lists">
+        <h2>🔹 5. HTML Lists</h2>
+        <article>
+            <p>
+                HTML provides three types of lists:
+                <code>Ordered</code>, <code>Unordered</code>, and <code>Description</code> lists.
+            </p>
+            <ul>
+                <li><strong>Unordered List:</strong> Uses <code>&lt;ul&gt;</code> and displays bullet points.</li>
+                <li><strong>Ordered List:</strong> Uses <code>&lt;ol&gt;</code> and displays numbered items.</li>
+                <li><strong>Description List:</strong> Uses <code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, and
+                    <code>&lt;dd&gt;</code> for terms and descriptions.</li>
+            </ul>
+        </article>
+
+        <pre><code class="Code">
+&lt;!-- Unordered List --&gt;
+&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Ordered List --&gt;
+&lt;ol&gt;
+  &lt;li&gt;Download Editor&lt;/li&gt;
+  &lt;li&gt;Write Code&lt;/li&gt;
+  &lt;li&gt;Run in Browser&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- Description List --&gt;
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;
+  </code></pre>
+    </section>
+
+
+    <section class="note-section" id="tables">
+        <h2>🔹 6. HTML Tables</h2>
+        <article>
+            <p>The <code>&lt;table&gt;</code> tag is used to create tables in HTML. Tables organize data into rows and
+                columns.</p>
+            <ul>
+                <li><code>&lt;tr&gt;</code> defines a table row.</li>
+                <li><code>&lt;td&gt;</code> defines a table cell (data cell).</li>
+                <li><code>&lt;th&gt;</code> defines a header cell (bold and centered).</li>
+                <li><code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, and <code>&lt;tfoot&gt;</code> group
+                    sections of the table.</li>
+            </ul>
+        </article>
+
+        <pre><code class="Code">
+&lt;table border="1"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Aarya&lt;/td&gt;
+      &lt;td&gt;18&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Raj&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+    </section>
+
+
+    <section class="note-section" id="semantic-tags">
+        <h2>🔹 7. Semantic Tags</h2>
+        <article>
+            <p><span class="highlight">Semantic tags</span> clearly describe their meaning in a human- and
+                machine-readable way. They help improve the structure, readability, and SEO of your web pages.</p>
+            <ul>
+                <li><code>&lt;header&gt;</code>: Represents the top section of a page (often contains logo, nav).</li>
+                <li><code>&lt;nav&gt;</code>: Defines navigation links.</li>
+                <li><code>&lt;main&gt;</code>: Contains the main content of the document.</li>
+                <li><code>&lt;section&gt;</code>: Groups related content.</li>
+                <li><code>&lt;article&gt;</code>: Represents independent, self-contained content.</li>
+                <li><code>&lt;aside&gt;</code>: Defines content aside from the main content (like a sidebar).</li>
+                <li><code>&lt;footer&gt;</code>: Represents the footer of the page.</li>
+            </ul>
+        </article>
+
+        <pre><code class="Code">
+&lt;header&gt;
+  &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav&gt;
+  &lt;a href="#home"&gt;Home&lt;/a&gt;
+  &lt;a href="#about"&gt;About&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;article&gt;
+      &lt;h2&gt;Blog Post&lt;/h2&gt;
+      &lt;p&gt;This is a blog post.&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;aside&gt;This is a sidebar.&lt;/aside&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;© 2025 Aarya&lt;/p&gt;
+&lt;/footer&gt;
+</code></pre>
+    </section>
+
+
+    <section class="note-section" id="inline-block">
+        <h2>🔹 8. Inline vs Block Elements</h2>
+        <article>
+            <p><span class="highlight">Block-level elements</span> start on a new line and take up the full width, while
+                <span class="highlight">inline elements</span> stay in the same line and only take as much width as
+                needed.</p>
+            <ul>
+                <li><strong>Block Elements:</strong> <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>,
+                    <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>, <code>&lt;section&gt;</code>,
+                    <code>&lt;article&gt;</code></li>
+                <li><strong>Inline Elements:</strong> <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>,
+                    <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;img&gt;</code></li>
+            </ul>
+        </article>
+
+        <pre><code class="Code">
+&lt;!-- Block Example --&gt;
+&lt;div&gt;
+  &lt;p&gt;This is a block element&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Inline Example --&gt;
+&lt;p&gt;
+  This is an &lt;span&gt;inline&lt;/span&gt; element inside a paragraph.
+&lt;/p&gt;
+</code></pre>
+    </section>
+
+
+    <section class="note-section" id="html-entities">
+        <h2>🔹 9. HTML Entities</h2>
+        <article>
+            <p>HTML entities are used to display reserved or special characters that cannot be typed directly in HTML.
+            </p>
+            <ul>
+                <li>Entities start with <code>&amp;</code> and end with <code>;</code>.</li>
+                <li>They are helpful for displaying characters like <code>&lt;</code>, <code>&gt;</code>,
+                    <code>&amp;</code>, etc.</li>
+                <li>You can also use them to display non-keyboard characters like copyright &amp; currency symbols.</li>
+            </ul>
+        </article>
+
+        <pre><code class="Code">
+&lt;p&gt;Less than: &amp;lt;&lt;/p&gt;
+&lt;p&gt;Greater than: &amp;gt;&lt;/p&gt;
+&lt;p&gt;Ampersand: &amp;amp;&lt;/p&gt;
+&lt;p&gt;Copyright: &amp;copy;&lt;/p&gt;
+&lt;p&gt;Rupee Symbol: ₹ (&#8377;) or &amp;#8377;&lt;/p&gt;
+</code></pre>
+    </section>
+
+
+    <section class="note-section" id="html-comments">
+        <h2>🔹 10. HTML Comments</h2>
+        <article>
+            <p>HTML comments are used to leave notes or explanations within the HTML code. They do not appear on the web
+                page when viewed in a browser.</p>
+            <ul>
+                <li>They are helpful for documentation and making your code easier to understand.</li>
+                <li>Browsers ignore the content inside comments.</li>
+                <li>Syntax: <code>&lt;!-- This is a comment --&gt;</code></li>
+            </ul>
+        </article>
+
+        <pre><code class="Code">
+&lt;!-- This is a comment --&gt;
+
+&lt;p&gt;This paragraph is visible.&lt;/p&gt;
+
+&lt;!-- &lt;p&gt;This paragraph is hidden in the browser.&lt;/p&gt; --&gt;
+</code></pre>
+    </section>
+
+
+    <section class="note-section" id="media-tags">
+        <h2>🔹 11. HTML Media Tags</h2>
+        <article>
+            <p>HTML provides built-in support for embedding media like audio and video using the
+                <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> tags.</p>
+            <ul>
+                <li><code>&lt;audio&gt;</code> is used to embed sound content.</li>
+                <li><code>&lt;video&gt;</code> is used to embed video content.</li>
+                <li>Use the <code>controls</code> attribute to display playback controls.</li>
+                <li>You can use <code>source</code> tags inside for multiple formats.</li>
+            </ul>
+        </article>
+
+        <pre><code class="Code">
+&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+  Your browser does not support the audio tag.
+&lt;/audio&gt;
+
+&lt;br&gt;
+
+&lt;video width="320" height="240" controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+</code></pre>
+    </section>
+
+    <section class="note-section" id="iframe">
+        <h2 >🔹 12. HTML Iframe</h2>
+        <article>
+            <p>The <code>&lt;iframe&gt;</code> (Inline Frame) tag is used to embed another HTML page or external content
+                (like a YouTube video or map) within your current page.</p>
+            <ul>
+                <li><code>src</code>: Specifies the URL of the page to embed.</li>
+                <li><code>width</code> and <code>height</code>: Control the size of the iframe.</li>
+                <li><code>frameborder</code>: (Optional) Specifies the border (usually 0 or 1).</li>
+                <li><code>allowfullscreen</code>: Enables fullscreen for embedded videos.</li>
+            </ul>
+        </article>
+
+        <pre><code class="Code">
+&lt;!-- Embedding a website --&gt;
+&lt;iframe src="https://example.com" width="400" height="300"&gt;
+  Your browser does not support iframes.
+&lt;/iframe&gt;
+
+&lt;br&gt;
+
+&lt;!-- Embedding a YouTube Video --&gt;
+&lt;iframe width="560" height="315" 
+  src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+  frameborder="0" allowfullscreen&gt;
+&lt;/iframe&gt;
+</code></pre>
+    </section>
+
+    <footer class="footer">
+  <p>© 2025 Aarya's Notes. All rights reserved.</p>
+  <p>Made with ❤️ by Aarya</p>
+</footer>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS notes by Aarya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <nav class="nav-container">
+            <h1 class="logo">Aarya's Notes</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="html-notes.html">HTML</a></li>
+                <li><a href="css-notes.html">CSS</a></li>
+                <li><a href="java-notes.html">Java</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="typing-text">CSS Notes by Aarya</h1>
+            <p>Your go-to place for clean, structured CSS notes.</p>
+            <a href="#contact"><button>Get in Touch</button></a>
+        </div>
+    </section>
+
+
+    <main>
+
+<section class="note-section" id="selectors">
+  <h2>🎯 CSS Selectors</h2>
+  <article>
+    <p>CSS selectors are used to "select" the HTML elements you want to style.</p>
+    <ul>
+      <li><code>*</code>: Selects all elements</li>
+      <li><code>p</code>: Selects all &lt;p&gt; elements</li>
+      <li><code>.class</code>: Selects elements with a specific class</li>
+      <li><code>#id</code>: Selects an element with a specific ID</li>
+      <li><code>element, element</code>: Group selector</li>
+      <li><code>element element</code>: Descendant selector</li>
+      <li><code>element > element</code>: Direct child selector</li>
+    </ul>
+  </article>
+  <pre><code class="Code">
+* {
+  margin: 0;
+}
+
+p {
+  color: red;
+}
+
+.box {
+  border: 1px solid black;
+}
+
+#header {
+  background-color: lightgray;
+}
+
+div > p {
+  font-size: 18px;
+}
+</code></pre>
+</section>
+
+<section class="note-section" id="colors">
+  <h2>🌈 CSS Colors</h2>
+  <article>
+    <p>CSS supports different formats for colors:</p>
+    <ul>
+      <li><strong>Color Name</strong>: <code>red</code>, <code>blue</code></li>
+      <li><strong>Hex Code</strong>: <code>#ff0000</code></li>
+      <li><strong>RGB</strong>: <code>rgb(255, 0, 0)</code></li>
+      <li><strong>RGBA</strong>: <code>rgba(255, 0, 0, 0.5)</code></li>
+      <li><strong>HSL</strong>: <code>hsl(0, 100%, 50%)</code></li>
+    </ul>
+  </article>
+  <pre><code class="Code">
+body {
+  background-color: #fffaf0;
+  color: rgb(0, 0, 0);
+}
+
+h1 {
+  color: hsl(210, 50%, 40%);
+}
+</code></pre>
+</section>
+
+<section class="note-section" id="text-styling">
+  <h2>✍️ Text Styling</h2>
+  <article>
+    <p>Use these properties to control the appearance of text:</p>
+    <ul>
+      <li><code>font-family</code>: Sets the font type</li>
+      <li><code>font-size</code>: Controls text size</li>
+      <li><code>font-weight</code>: Controls boldness</li>
+      <li><code>text-align</code>: Aligns text (left, center, right)</li>
+      <li><code>text-decoration</code>: Underline, overline, etc.</li>
+      <li><code>line-height</code>: Sets line spacing</li>
+      <li><code>letter-spacing</code>: Controls spacing between letters</li>
+    </ul>
+  </article>
+  <pre><code class="Code">
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+}
+</code></pre>
+</section>
+
+
+<section class="note-section" id="box-model">
+  <h2>📦 CSS Box Model</h2>
+  <article>
+    <p>Every HTML element is a box with 4 parts:</p>
+    <ul>
+      <li><strong>Content</strong>: Actual content (text/image)</li>
+      <li><strong>Padding</strong>: Space around content</li>
+      <li><strong>Border</strong>: Edge around padding</li>
+      <li><strong>Margin</strong>: Space outside border</li>
+    </ul>
+  </article>
+  <pre><code class="Code">
+div {
+  padding: 20px;
+  border: 2px solid brown;
+  margin: 30px;
+}
+</code></pre>
+</section>
+
+<section class="note-section" id="display">
+  <h2>🖼️ CSS Display</h2>
+  <article>
+    <p>The <code>display</code> property defines how an element is displayed on the page.</p>
+    <ul>
+      <li><code>block</code>: Starts on a new line (e.g., &lt;div&gt;)</li>
+      <li><code>inline</code>: Stays in line (e.g., &lt;span&gt;)</li>
+      <li><code>inline-block</code>: Inline but allows box properties</li>
+      <li><code>flex</code>: Flexbox layout</li>
+      <li><code>grid</code>: Grid layout</li>
+      <li><code>none</code>: Hides the element</li>
+    </ul>
+  </article>
+  <pre><code class="Code">
+.container {
+  display: flex;
+  gap: 20px;
+}
+</code></pre>
+</section>
+
+<section class="note-section" id="position">
+  <h2>📍 CSS Position</h2>
+  <article>
+    <p>The <code>position</code> property is used to set how an element is positioned in the document.</p>
+    <ul>
+      <li><code>static</code>: Default (normal flow)</li>
+      <li><code>relative</code>: Positioned relative to its normal position</li>
+      <li><code>absolute</code>: Positioned relative to the nearest positioned ancestor</li>
+      <li><code>fixed</code>: Stays fixed while scrolling</li>
+      <li><code>sticky</code>: Scrolls with the page but sticks when it reaches a position</li>
+    </ul>
+  </article>
+  <pre><code class="Code">
+.sticky-bar {
+  position: sticky;
+  top: 0;
+  background: brown;
+}
+</code></pre>
+</section>
+
+
+<section class="note-section" id="media-queries">
+  <h2>📱 Media Queries</h2>
+  <article>
+    <p>Media queries make your site responsive by applying different styles for different screen sizes.</p>
+    <ul>
+      <li><code>min-width</code>: Apply styles above a certain width</li>
+      <li><code>max-width</code>: Apply styles below a certain width</li>
+      <li>Common breakpoints:
+        <ul>
+          <li>Mobile: <code>max-width: 600px</code></li>
+          <li>Tablet: <code>max-width: 768px</code></li>
+          <li>Desktop: <code>min-width: 1024px</code></li>
+        </ul>
+      </li>
+    </ul>
+  </article>
+  <pre><code class="Code">
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+  }
+}
+</code></pre>
+</section>
+
+    </main>
+    
+    
+</body>
+</html>
