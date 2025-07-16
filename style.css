@@ -4,6 +4,8 @@
   --accent: #d4a373;        /* warm sand */
   --text: #2c2c2c;
 }
+
+
 .navbar {
   background-color: var(--primary);
   color: var(--main-bg);
