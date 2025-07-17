@@ -251,6 +251,39 @@ div {
 </section>
 
 
+<section class="note-section" id="css-grid">
+  <h2>🔲 CSS Grid</h2>
+  <article>
+    <p>CSS Grid is a two-dimensional layout system used for building web page layouts efficiently.</p>
+    <ul>
+      <li>Use <code>display: grid</code> to create a grid container.</li>
+      <li>Define columns and rows using <code>grid-template-columns</code> and <code>grid-template-rows</code>.</li>
+      <li>Use <code>gap</code> to add space between rows and columns.</li>
+      <li>Place items using properties like:
+        <ul>
+          <li><code>grid-column</code> and <code>grid-row</code></li>
+          <li><code>grid-area</code></li>
+        </ul>
+      </li>
+    </ul>
+  </article>
+  <pre><code class="Code">
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
+}
+
+.item1 {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+</code></pre>
+</section>
+
+
+
     </main>
     
     
