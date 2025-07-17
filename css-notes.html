@@ -206,6 +206,51 @@ div {
 </code></pre>
 </section>
 
+<section class="note-section" id="flexbox">
+  <h2>📦 CSS Flexbox</h2>
+  <article>
+    <p>Flexbox (Flexible Box Layout) is used to arrange elements in a row or column, making layout alignment easy and flexible.</p>
+    <ul>
+      <li><code>display: flex</code> or <code>display: inline-flex</code> enables Flexbox.</li>
+      <li>Main Axis: Direction defined by <code>flex-direction</code> (default is <code>row</code>).</li>
+      <li>Cross Axis: Perpendicular to main axis.</li>
+      <li>Important container properties:
+        <ul>
+          <li><code>flex-direction</code>: <code>row</code>, <code>row-reverse</code>, <code>column</code>, <code>column-reverse</code></li>
+          <li><code>justify-content</code>: Aligns items horizontally (<code>center</code>, <code>space-between</code>, etc.)</li>
+          <li><code>align-items</code>: Aligns items vertically (<code>center</code>, <code>flex-start</code>, <code>stretch</code>)</li>
+          <li><code>flex-wrap</code>: Allows wrapping (<code>wrap</code>, <code>nowrap</code>)</li>
+          <li><code>gap</code>: Adds space between flex items</li>
+        </ul>
+      </li>
+      <li>Item properties:
+        <ul>
+          <li><code>flex</code>: Shorthand for <code>flex-grow</code>, <code>flex-shrink</code>, and <code>flex-basis</code></li>
+          <li><code>order</code>: Controls item order</li>
+          <li><code>align-self</code>: Overrides <code>align-items</code> for a single item</li>
+        </ul>
+      </li>
+    </ul>
+  </article>
+  <pre><code class="Code">
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.item {
+  flex: 1;
+  order: 2;
+  align-self: flex-end;
+}
+  </code></pre>
+</section>
+
+
     </main>
     
     
