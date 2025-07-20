@@ -282,6 +282,68 @@ div {
 </code></pre>
 </section>
 
+<section class="note-section" id="css-transition">
+  <h2>🔄 CSS Transition</h2>
+  <article>
+    <p>The <code>transition</code> property allows smooth animation between CSS property changes over a duration.</p>
+    <ul>
+      <li>Use it to animate on hover, focus, or state change.</li>
+      <li>Common transition properties include:
+        <ul>
+          <li><code>transition-property</code></li>
+          <li><code>transition-duration</code></li>
+          <li><code>transition-timing-function</code></li>
+          <li><code>transition-delay</code></li>
+        </ul>
+      </li>
+      <li>Use shorthand like <code>transition: all 0.3s ease;</code></li>
+    </ul>
+  </article>
+  <pre><code class="Code">
+.box {
+  background-color: red;
+  transition: background-color 0.5s ease;
+}
+
+.box:hover {
+  background-color: blue;
+}
+</code></pre>
+</section>
+
+<section class="note-section" id="css-animation">
+  <h2>🎞️ CSS Animation</h2>
+  <article>
+    <p>The <code>animation</code> property is used to animate HTML elements using <code>@keyframes</code>.</p>
+    <ul>
+      <li>Use <code>@keyframes</code> to define the animation steps.</li>
+      <li>Main sub-properties:
+        <ul>
+          <li><code>animation-name</code></li>
+          <li><code>animation-duration</code></li>
+          <li><code>animation-timing-function</code></li>
+          <li><code>animation-delay</code></li>
+          <li><code>animation-iteration-count</code></li>
+          <li><code>animation-direction</code></li>
+        </ul>
+      </li>
+      <li>Shorthand example: <code>animation: bounce 2s ease-in-out infinite;</code></li>
+    </ul>
+  </article>
+  <pre><code class="Code">
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-100px); }
+  100% { transform: translateY(0); }
+}
+
+.ball {
+  animation: bounce 1s ease-in-out infinite;
+}
+</code></pre>
+</section>
+
+
 
 
     </main>
