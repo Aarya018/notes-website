@@ -343,6 +343,69 @@ div {
 </code></pre>
 </section>
 
+<section class="note-section" id="css-object">
+  <h2>🖼️ CSS Object Properties</h2>
+  <p>CSS <code>object-fit</code> and <code>object-position</code> are used to control how an image or video is resized and positioned within its container.</p>
+
+  <h3>📌 object-fit</h3>
+  <p>Controls how the content (image/video) should be resized to fit its container.</p>
+
+  <ul>
+    <li><code>fill</code>: Stretches the content to fill the box (default).</li>
+    <li><code>contain</code>: Scales the content to fit inside the box while maintaining aspect ratio.</li>
+    <li><code>cover</code>: Scales the content to fill the box while maintaining aspect ratio. Some parts may be cropped.</li>
+    <li><code>none</code>: Keeps original size.</li>
+    <li><code>scale-down</code>: Same as <code>none</code> or <code>contain</code>, whichever is smaller.</li>
+  </ul>
+
+  <pre><code>
+img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+  </code></pre>
+
+  <h3>📍 object-position</h3>
+  <p>Controls the alignment of the content inside the box.</p>
+  <ul>
+    <li>Values like <code>center</code>, <code>top</code>, <code>bottom</code>, <code>left</code>, <code>right</code></li>
+    <li>Can also use percentage or length units</li>
+  </ul>
+
+  <pre><code>
+img {
+  object-position: top right;
+}
+  </code></pre>
+</section>
+
+
+<section class="note-section" id="css-filter">
+  <h2>🎨 CSS Filter Property</h2>
+  <p>The <code>filter</code> property is used to apply visual effects (like blur, brightness, grayscale) to elements such as images, text, or divs.</p>
+
+  <h3>🧪 Common Filter Functions</h3>
+  <ul>
+    <li><code>blur(px)</code>: Applies a blur effect.</li>
+    <li><code>brightness(%)</code>: Adjusts brightness (100% is default).</li>
+    <li><code>contrast(%)</code>: Adjusts contrast.</li>
+    <li><code>grayscale(%)</code>: Converts to grayscale (100% is fully gray).</li>
+    <li><code>sepia(%)</code>: Adds a warm brown tone.</li>
+    <li><code>invert(%)</code>: Inverts the colors.</li>
+    <li><code>saturate(%)</code>: Increases or decreases color saturation.</li>
+    <li><code>hue-rotate(deg)</code>: Rotates hue angle (changes color).</li>
+    <li><code>drop-shadow(x y blur color)</code>: Adds a shadow similar to <code>box-shadow</code> but works inside <code>filter</code>.</li>
+  </ul>
+
+  <pre><code>
+img {
+  filter: grayscale(100%) blur(2px) brightness(120%);
+}
+  </code></pre>
+</section>
+
+
 
 
 
