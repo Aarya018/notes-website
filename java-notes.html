@@ -43,5 +43,188 @@
 
         COMING SOON 
     </div>
+
+
+    <section class="note-section" id="variables">
+  <h2>📦 JavaScript Variables</h2>
+  <article>
+    <p>Variables are containers for storing data values. In JavaScript, you can use <code>var</code>, <code>let</code>, or <code>const</code> to declare variables. Each has different scoping and re-declaration rules.</p>
+    <h3>💡 Rules for Naming Variables</h3>
+    <ul>
+      <li>Can include letters, digits, underscores (<code>_</code>), and dollar signs (<code>$</code>)</li>
+      <li>Must begin with a letter, <code>_</code>, or <code>$</code></li>
+      <li>Cannot be a JavaScript reserved word</li>
+      <li>Case-sensitive (<code>harry</code> and <code>HaRry</code> are different)</li>
+    </ul>
+    <h3>🔍 var, let & const</h3>
+    <ul>
+      <li><code>var</code> → Function-scoped or globally scoped</li>
+      <li><code>let</code> → Block-scoped, can be updated but not re-declared in same scope</li>
+      <li><code>const</code> → Block-scoped, must be initialized, cannot be updated or re-declared</li>
+    </ul>
+  </article>
+  <pre><code class="Code">
+// var example
+var firstName = "Aarya";
+var score1 = 50;
+var score2 = 70;
+console.log(firstName, score1 + score2); // Aarya 120
+
+// let example
+let age = 18;
+age = 19; // allowed
+console.log(age); // 19
+
+// const example
+const pi = 3.1416;
+// pi = 3.15; // ❌ Error
+console.log(pi);
+</code></pre>
+</section>
+
+<section class="note-section" id="data-types">
+  <h2>📂 JavaScript Data Types</h2>
+  <article>
+    <p>Data types define the type of data that can be stored in a variable.</p>
+    <h3>🔹 Primitive Data Types</h3>
+    <ul>
+      <li><code>string</code> → Text data</li>
+      <li><code>number</code> → Integer or floating-point numbers</li>
+      <li><code>boolean</code> → true/false values</li>
+      <li><code>undefined</code> → Variable declared but not assigned</li>
+      <li><code>null</code> → Intentional empty value</li>
+      <li><code>symbol</code> → Unique identifiers</li>
+      <li><code>bigint</code> → Large integers</li>
+    </ul>
+    <h3>🔹 Non-Primitive Data Types</h3>
+    <p><strong>Objects:</strong> Key-value pairs storing multiple values in a single variable.</p>
+  </article>
+  <pre><code class="Code">
+// Primitive examples
+let city = "Mumbai";
+let temperature = 30.5;
+let isSunny = true;
+let notAssigned;
+let emptyValue = null;
+console.log(typeof city, typeof temperature, typeof isSunny, typeof notAssigned, typeof emptyValue);
+
+// Object example
+let car = {
+  brand: "Tesla",
+  model: "Model S",
+  year: 2024
+};
+console.log(car);
+
+// Adding new property
+car.color = "Red";
+console.log(car);
+</code></pre>
+</section>
+
+
+
+<!-- IF...ELSE STATEMENT -->
+<section class="note-section" id="if-else">
+  <h2>🔀 JavaScript if...else Statement</h2>
+  <article>
+    <p>The <code>if...else</code> statement is used to perform different actions based on conditions.</p>
+    <ul>
+      <li><code>if</code> → Executes code if the condition is <strong>true</strong>.</li>
+      <li><code>else</code> → Executes code if the condition is <strong>false</strong>.</li>
+      <li><code>else if</code> → Checks another condition if the first one is false.</li>
+    </ul>
+
+    <p><strong>Syntax:</strong></p>
+    <pre><code class="Code">
+if (condition) {
+  // code runs if condition is true
+} else if (anotherCondition) {
+  // code runs if anotherCondition is true
+} else {
+  // code runs if all conditions are false
+}
+    </code></pre>
+  </article>
+
+  <h3>Example:</h3>
+  <pre><code class="Code">
+let age = 18;
+
+if (age >= 18) {
+  console.log("You are an adult");
+} else {
+  console.log("You are a minor");
+}
+
+let marks = 75;
+
+if (marks >= 90) {
+  console.log("Grade: A+");
+} else if (marks >= 75) {
+  console.log("Grade: A");
+} else if (marks >= 50) {
+  console.log("Grade: B");
+} else {
+  console.log("Fail");
+}
+  </code></pre>
+</section>
+
+
+<!-- LOOPS -->
+<section class="note-section" id="loops">
+  <h2>🔄 JavaScript Loops</h2>
+  <article>
+    <p>Loops are used to execute a block of code multiple times until a condition is false.</p>
+
+    <h3>1️⃣ for loop</h3>
+    <p>Used when you know how many times to run the loop.</p>
+    <pre><code class="Code">
+for (let i = 1; i <= 5; i++) {
+  console.log("Number: " + i);
+}
+    </code></pre>
+
+    <h3>2️⃣ while loop</h3>
+    <p>Executes code while the condition is true.</p>
+    <pre><code class="Code">
+let count = 1;
+while (count <= 5) {
+  console.log("Count: " + count);
+  count++;
+}
+    </code></pre>
+
+    <h3>3️⃣ do...while loop</h3>
+    <p>Executes code at least once, then repeats while the condition is true.</p>
+    <pre><code class="Code">
+let num = 1;
+do {
+  console.log("Number is: " + num);
+  num++;
+} while (num <= 5);
+    </code></pre>
+
+    <h3>4️⃣ for...of loop</h3>
+    <p>Used to loop through elements of an iterable like arrays.</p>
+    <pre><code class="Code">
+let fruits = ["Apple", "Banana", "Mango"];
+for (let fruit of fruits) {
+  console.log(fruit);
+}
+    </code></pre>
+
+    <h3>5️⃣ for...in loop</h3>
+    <p>Used to loop through object properties.</p>
+    <pre><code class="Code">
+let person = {name: "Aarya", age: 18};
+for (let key in person) {
+  console.log(key + ": " + person[key]);
+}
+    </code></pre>
+  </article>
+</section>
+
 </body>
 </html>
